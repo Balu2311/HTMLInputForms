@@ -7,7 +7,7 @@ nameText.addEventListener('input', () =>{
     else
     nameError.innerHTML = "";
 });
-//Uc2
+//UC2
 const email = document.querySelector('#email');
 const emailError =  document.querySelector('#errorEmail');
 email.addEventListener('input', () =>{
@@ -16,4 +16,14 @@ email.addEventListener('input', () =>{
         emailError.innerHTML = "Email is Incorrect format";
     else
         emailError.innerHTML = "";
+});
+//UC3
+const tel = document.querySelector('#tel');
+const errorTel =  document.querySelector('#errorTel');
+tel.addEventListener('input', () =>{
+    let phonePattern = new RegExp('^[0-9]{2}\\s[0-9]{10}$');
+    if(!phonePattern.test(phonePattern.value))
+        errorTel.innerHTML = "Phone number is Incorrect format";
+    else
+        errorTel.innerHTML = "";
 });
