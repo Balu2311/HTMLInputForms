@@ -7,3 +7,13 @@ nameText.addEventListener('input', () =>{
     else
     nameError.innerHTML = "";
 });
+//Uc2
+const email = document.querySelector('#email');
+const emailError =  document.querySelector('#errorEmail');
+email.addEventListener('input', () =>{
+    let emailPattern = new RegExp('^[A-za-z]+([+. \-_]{1}\w+)?@[a-z0-9]+\.[a-z]{2,3}(\.[a-z]{2})?$');
+    if(!emailPattern.test(email.value))
+        emailError.innerHTML = "Email is Incorrect format";
+    else
+        emailError.innerHTML = "";
+});
