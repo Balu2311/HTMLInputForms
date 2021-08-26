@@ -37,3 +37,10 @@ pwd.addEventListener('input', () =>{
     else
         pwdError.innerHTML = "";
 });
+//salary
+const salary = document.querySelector('#salary');
+const outputSal =  document.querySelector('#salary_output');
+outputSal.innerHTML = salary.value;
+salary.addEventListener('input', () =>{
+    outputSal.innerHTML = salary.value;
+});
